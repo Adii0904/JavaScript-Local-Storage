@@ -1,0 +1,21 @@
+const readLocalStorage = document.getElementById("store");
+readLocalStorage.addEventListener("click", () => {
+  console.log("hey");
+
+  //agar hame localstorge mein data store karna ho toh ekse loye
+  localStorage.setItem("roll", 89);
+});
+
+//if we want to read data from the Local storage;
+const readData = document.getElementById("read");
+readData.addEventListener("click", () => {
+  var data = localStorage.getItem("subject");
+  alert(data);
+});
+
+//TO delete the data from the Local storage
+const deleteData = document.getElementById("delete");
+deleteData.addEventListener("click", () => {
+  var deletingData = localStorage.removeItem("roll");
+  console.log(deletingData);
+});
